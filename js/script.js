@@ -68,9 +68,9 @@ resetBtn.addEventListener("click", () => {
 
 
 const checkingInput = function() {
-    if (age.value !== "" && height.value !== "" && weight.value !== "") submitBtn.disabled = false
+    if (+age.value > 0 && +height.value > 0 && +weight.value > 0) submitBtn.disabled = false
     else submitBtn.disabled = true
-    if (age.value !== "" || height.value !== "" || weight.value !== "") resetBtn.disabled = false
+    if (+age.value > 0 || +height.value > 0 || +weight.value > 0) resetBtn.disabled = false
     else resetBtn.disabled = true
 }
 
